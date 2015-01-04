@@ -1,5 +1,89 @@
-<ion-view title="Account">
+<ion-view title="推薦">
   <ion-content class="padding">
-    <h1>Account</h1>
+    <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="店名" ng-model="food.name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="地址" ng-model="food.addr" value="Testing">
+      </label>
+      <p>
+        <center>
+          <button class="button button-small" style="width: 150px;" ng-click="setPosition(food)">
+            使用當前位置
+          </button>
+        </center>
+      </p>
+      <label class="item item-input">
+        <textarea placeholder="簡介" name="content" rows="5" ng-model="food.content"></textarea>
+      </label>
+    </div>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      類別
+    </div>
+     <select ng-model="food.tags[0]">
+       <option value="特約商店">特約商店</option>
+       <option value="早餐" selected>早餐</option>
+       <option value="午餐">午餐</option>
+       <option value="晚餐">晚餐</option>
+       <option value="宵夜">宵夜</option>
+     </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      類別
+    </div>
+     <select ng-model="food.tags[1]">
+       <option value="特約商店">特約商店</option>
+       <option value="早餐" selected>早餐</option>
+       <option value="午餐">午餐</option>
+       <option value="晚餐">晚餐</option>
+       <option value="宵夜">宵夜</option>
+     </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      類別
+    </div>
+     <select ng-model="food.tags[2]">
+       <option value="特約商店">特約商店</option>
+       <option value="早餐" selected>早餐</option>
+       <option value="午餐">午餐</option>
+       <option value="晚餐">晚餐</option>
+       <option value="宵夜">宵夜</option>
+     </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      類別
+    </div>
+     <select ng-model="food.tags[3]">
+       <option value="特約商店">特約商店</option>
+       <option value="早餐" selected>早餐</option>
+       <option value="午餐">午餐</option>
+       <option value="晚餐">晚餐</option>
+       <option value="宵夜">宵夜</option>
+     </select>
+  </label>  <label class="item item-input item-select">
+    <div class="input-label">
+      類別
+    </div>
+     <select ng-model="food.tags[4]">
+       <option value="特約商店">特約商店</option>
+       <option value="早餐" selected>早餐</option>
+       <option value="午餐">午餐</option>
+       <option value="晚餐">晚餐</option>
+       <option value="宵夜">宵夜</option>
+     </select>
+  </label>
+  <p></p>
+  <p></p>
+  <p></p>
+    <center>
+        <button class="button button-small" style="width: 70px;" ng-click="comment(food)">
+          新增
+        </button>
+    </center>
   </ion-content>
 </ion-view>

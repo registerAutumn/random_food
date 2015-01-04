@@ -1,5 +1,58 @@
-<ion-view title="Dashboard">
+<style>
+    .block{
+        width: 90%;
+        height: 70px;
+        text-align: center;
+        font-size:20px;
+        margin-bottom: 10px;
+        margin: auto;
+        border: 1px solid #000;
+        border-radius: 5px;
+        line-height: 70px;
+    }
+    .block2{
+        width: 90%;
+        height: 40px;
+        text-align: center;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin: auto;
+        line-height: 40px;
+    }
+    .item{
+        margin-bottom:30px;
+    }
+</style>
+<ion-view title="肚子餓">
   <ion-content class="padding">
-    <h1>Dash</h1>
+    <label class="item item-input item-select">
+        <div class="input-label">
+          類別
+        </div>
+         <select ng-model="tags" ng-change="chg(tags)">
+           <option value="特約商店">特約商店</option>
+           <option value="早餐" selected>早餐</option>
+           <option value="午餐">午餐</option>
+           <option value="晚餐">晚餐</option>
+           <option value="宵夜">宵夜</option>
+         </select>
+    </label>  
+    <div class="block">
+        {{ food.name }}    
+    </div>
+    <div class="block2">
+        地址: {{ food.addr }}
+    </div>
+    <div class="block2">
+        <button class="button button-light" ng-click="negtive(food.addr)">
+          導航
+        </button>
+    </div>
+    <center style='margin-top: 30px;'>
+        <button class="button button-light" ng-click="rnd(tags)">
+            開始轉動
+        </button>
+    </center>
   </ion-content>
 </ion-view>
